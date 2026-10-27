@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import './App.css';
 
-const API = 'http://localhost:5000/api/expenses';
+const API = `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/expenses`;
 const categories = ['Food', 'Travel', 'Bills', 'Shopping', 'Other'];
 
 const today = () => new Date().toISOString().slice(0, 10);
